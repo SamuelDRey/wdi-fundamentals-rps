@@ -1,72 +1,82 @@
-describe("#getPlayerMove", function() {
-  describe("when a move is given as a parameter", function() {
-    it("should return that move", function(){
-      expect(getPlayerMove('rock')).toEqual('rock');
-      expect(getPlayerMove('paper')).toEqual('paper');
-      expect(getPlayerMove('scissors')).toEqual('scissors');
-    });
-  });
-});
+////////////////////////////////////////////////
+/*   Provided Code - Please Don't Edit   */
+////////////////////////////////////////////////
+'use strict';
 
-describe("#getComputerMove", function() {
-  describe("when a move is given as a parameter", function() {
-    it("should return that move", function(){
-      expect(getComputerMove('rock')).toEqual('rock');
-      expect(getComputerMove('paper')).toEqual('paper');
-      expect(getComputerMove('scissors')).toEqual('scissors');
-    });
-  });
-});
+function getInput() {
+    console.log("Please choose either 'rock', 'paper', or 'scissors'.")
+    return prompt();
+}
+function randomPlay() {
+    var randomNumber = Math.random();
+    if (randomNumber < 0.33) {
+        return "rock";
+    } else if (randomNumber < 0.66) {
+        return "paper";
+    } else {
+        return "scissors";
+    }
+}
+////////////////////////////////////////////////
+/*           Write Your Code Below            */
+////////////////////////////////////////////////
 
-describe("#getWinner", function() {
-  var playerMove;
-  describe("when the player picks rock", function() {
-    beforeEach(function(){
-      playerMove = "rock";
-    });
-    it("should be a tie if the computer picks rock", function() {
-      expect(getWinner(playerMove,'rock')).toEqual('tie');
-    });
-    it("should be a computer win if the computer picks paper", function() {
-      expect(getWinner(playerMove,'paper')).toEqual('computer');
-    });
-    it("should be a player win if the computer picks scissors", function() {
-      expect(getWinner(playerMove,'scissors')).toEqual('player');
-    });
-  });
-  describe("when the player picks paper", function() {
-    beforeEach(function(){
-      playerMove = "paper";
-    });
-    it("should be a player win if the computer picks rock", function() {
-      expect(getWinner(playerMove,'rock')).toEqual('player');
-    });
-    it("should be a tie if the computer picks paper", function() {
-      expect(getWinner(playerMove,'paper')).toEqual('tie');
-    });
-    it("should be a computer win if the computer picks scissors", function() {
-      expect(getWinner(playerMove,'scissors')).toEqual('computer');
-    });
-  });
-  describe("when the player picks scissors", function() {
-    beforeEach(function(){
-      playerMove = "scissors";
-    });
-    it("should be a computer win if the computer picks rock", function() {
-      expect(getWinner(playerMove,'rock')).toEqual('computer');
-    });
-    it("should be a player win if the computer picks paper", function() {
-      expect(getWinner(playerMove,'paper')).toEqual('player');
-    });
-    it("should be a tie if the computer picks scissors", function() {
-      expect(getWinner(playerMove,'scissors')).toEqual('tie');
-    });
-  });
-});
+function getPlayerMove(move) {
+    var move = "rock" || "paper" || "Scissors";
+    if ( move == "rock") {
+        move = "rock";
+    }
+    if ( move == "scissors") {
+        move = "scissors"
+    }
 
-describe("#playToFive", function() {
-  it ("should end the game once either the player or the computer has won 5 times.", function(){
-    var result = playToFive();
-    expect(result[0] == 5 || result[1] == 5).toEqual(true);
-  });
-});
+ if ( move == "paper") {
+    move = "paper"
+ }
+ else (move = undefined || null );
+ move =  "getInput()";
+} 
+    // Write an expression that operates on a variable called `move`
+    // If a `move` has a value, your expression should evaluate to that value.
+    // However, if `move` is not specified / is null, your expression should equal `getInput()`.
+    return /* Your Expression */;
+}
+
+function getComputerMove(move) {
+    if ( move == "rock") {
+        move = "rock";
+    }
+    if ( move == "scissors") {
+        move = "scissors"
+    }
+
+ if ( move == "paper") {
+    move = "paper"
+ }
+ else ( move = undefined || null);
+ move = " randomPlay()";
+}
+    // Write an expression that operates on a variable called `move`
+    // If a `move` has a value, your expression should evaluate to that value.
+    // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
+    return 
+}
+
+function getWinner(playerMove,computerMove) {
+    var winner;
+    // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
+    // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
+    // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
+    /* YOUR CODE HERE */
+    return winner;
+}
+
+function playToFive() {
+    console.log("Let's play Rock, Paper, Scissors");
+    var playerWins = 0;
+    var computerWins = 0;
+    // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
+    /* YOUR CODE HERE */
+    return [playerWins, computerWins];
+}
+
